@@ -51,14 +51,14 @@ public class GameLauncher : MonoBehaviour
 
         GameObject[] arrows = GameObject.FindGameObjectsWithTag("Arrow");
 
-        ScoreManager.score += arrows.Length * 10;
-
+        float addScore = arrows.Length * 10;
+      
         for(int i=0; i < arrows.Length; i++)
         {
             Destroy(arrows[i].gameObject);
         }
         Destroy(pc.gameObject);
 
-        ResultText.text = string.Format("{0 : 0,000Á¡}", ScoreManager.score * 100f); //$"{(int)leastTime * 10}";
+        ResultText.text = string.Format("{0 : 0,000Á¡}", ScoreManager.score * 100f + addScore); 
     }
 }

@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
         playerData.DataSetup(100);
     }
 
-   // public float hp = 100;
     public float radius = 1f;
     void Update()
     {
